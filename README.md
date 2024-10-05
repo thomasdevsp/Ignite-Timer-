@@ -1,11 +1,22 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## External libraries used in this project
 
-Currently, two official plugins are available:
+```js
+ "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "date-fns": "^4.1.0",
+    "immer": "^10.1.1",
+    "phosphor-react": "^1.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.0",
+    "react-router-dom": "^6.26.2",
+    "styled-components": "^6.1.13",
+    "zod": "^3.23.8"
+  },
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## Expanding the ESLint configuration
 
@@ -48,3 +59,5 @@ export default tseslint.config({
   },
 })
 ```
+
+

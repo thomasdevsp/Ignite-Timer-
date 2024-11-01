@@ -1,3 +1,4 @@
+import { differenceInSeconds } from "date-fns";
 import {
   createContext,
   ReactNode,
@@ -5,13 +6,12 @@ import {
   useReducer,
   useState,
 } from "react";
-import { Cycle, CyclesReducer } from "../reducers/cycles/reducer";
 import {
   addNewCycleAction,
   interruptCurrentCycleAction,
   markCurrentCycleAsFinishedAction,
 } from "../reducers/actions";
-import { differenceInSeconds } from "date-fns";
+import { Cycle, CyclesReducer } from "../reducers/cycles/reducer";
 
 interface CreateCycleData {
   task: string;
@@ -22,7 +22,7 @@ interface CyclesContextType {
   cycles: Cycle[];
   activeCycle: Cycle | undefined;
   activeCycleId: string | null;
-  amountSecondsPassed: number;
+  amountSecondsPassed: number | undefined;
   markCurrentCycleAsFinished: () => void;
   setSecondsPassed: (seconds: number) => void;
   createNewCycle: (data: CreateCycleData) => void;
